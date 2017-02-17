@@ -14,25 +14,75 @@
     right: 0;
     z-index: 1;
 
-    ul {
-        height: 78px;
+    .topnav {
+        
+        ul {
+            height: 78px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            //background-color: #333;
 
-        li {
-            height: 100%;
+            li {
+                height: 100%;
+
+                .icon {
+                    display: none;
+                }
+            }
+
+            a {
+                .textConfig;
+                display: inline-block;
+                //color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                transition: 0.3s;
+                //font-size: 17px;
+
+                &:hover {
+                    background-color: #555;
+                }
+            }
         }
 
         a {
-            .textConfig;
+            height: 78px;
         }
+
     }
 
-    a {
-        height: 78px;
+    /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+    @media screen and (max-width:680px) {
+      ul.topnav li:not(:first-child) {display: none;}
+      ul.topnav li.icon {
+        float: right;
+        display: inline-block;
+      }
+    }
+
+    /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+    @media screen and (max-width:680px) {
+      ul.topnav.responsive {position: relative;}
+      ul.topnav.responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      ul.topnav.responsive li {
+        float: none;
+        display: inline;
+      }
+      ul.topnav.responsive li a {
+        display: block;
+        text-align: left;
+      }
     }
 }
 
 .main-menu-side {
-	//background: rgba(236,239,241,0.56);
     background: @menu_side_background_color;
     margin: 0 1px;
     box-shadow: 3px 0 6px rgba(0,0,0,0.24);
@@ -43,7 +93,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    overflow: auto;
+    //overflow: auto;
 	position: fixed;
 	z-index: 0;
 
@@ -58,6 +108,16 @@
 		    padding: 0;
 		    line-height: 40px;
 		}
+
+        li:hover {
+            background-color: @selected_btn_active_color;
+            border-left: 1px solid @menu_top_background_color;
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            transition: all 1s ease;
+        }
 
         span {
             padding-right: 5px;
@@ -76,6 +136,29 @@
                 font-size: 13px;
             }
 	    }
+    }
+
+    .sub-menu li {
+        background-color: #808080;
+        border: none;
+        line-height: 28px;
+        border-bottom: 1px solid #696868;
+        margin-left: 0px;
+
+        &:hover{
+            background-color: #4e4e4e;
+        }
+
+        &:before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            position: absolute;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+            border-left: 4px solid #ffffff;
+            margin: 10px 5px 5px 5px;
+        }
     }
 }
 

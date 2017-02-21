@@ -1,0 +1,53 @@
+// ******** FUNCTIONS ********************* //
+
+.textConfig(@text-color: #ffffff, @text-size: 16px) {
+  color: @text-color !important;
+  font-size: @text-size !important;
+}
+
+// ***************************************** //
+
+// ******** INDEX.HTML / MAIN.LESS ******** //
+
+@menu_top_background_color: #4e4e4e !important;	 //#bfbfbf (claro) / #4e4e4e (escuro)
+@menu_side_background_color: #9a9a9a !important; //#5d5d5d (escuro) / #9a9a9a (claro)
+@selected_btn_active_color: #e25252 !important;
+
+// ***************************************** //
+
+// ************** MEDIA QUERIES ************ //
+
+@media only screen and ( min-width: 768px ) {
+	.main-menu-top {
+		height: 78px !important;
+	}
+}
+
+@media only screen and ( max-width: 768px ) {
+	.main-menu-top {
+	    top: inherit;
+	    left: inherit;
+	    right: inherit;
+	    position: inherit;
+	}
+
+	.main-menu-side {
+		margin: inherit !important;
+	    box-shadow: inherit !important;
+	    padding-bottom: 0 !important;
+	    padding-top: 0 !important;
+	    width: inherit !important;
+	    top: inherit !important;
+	    left: inherit !important;
+	    bottom: inherit !important;
+	    position: inherit !important;
+
+	    li {
+	    	&:first-child {
+	    		border-top: 1px solid white;
+	    	}
+	    }
+	}
+}
+
+// ***************************************** //

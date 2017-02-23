@@ -31,7 +31,6 @@
 }
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 120%;
   line-height: 1.5;
 }
 .active a {
@@ -131,6 +130,7 @@ body {
 article {
   margin-left: 221px;
   padding: 10px;
+  position: absolute;
 }
 footer {
   position: fixed;

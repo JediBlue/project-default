@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 @media only screen and (min-width: 768px) {
   .main-menu-top {
     height: 78px !important;
@@ -24,9 +25,20 @@
   .main-menu-side li:first-child {
     border-top: 1px solid white;
   }
+  article {
+    margin-left: 0 !important;
+  }
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 120%;
+  line-height: 1.5;
 }
 .active a {
   background-color: #e25252 !important;
+}
+.navbar {
+  margin-bottom: 0;
 }
 .container-fluid {
   background: #4e4e4e !important;
@@ -54,7 +66,7 @@
   margin: 0 1px;
   box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24);
   padding-top: 80px;
-  width: 240px;
+  width: 220px;
   top: 0;
   left: 0;
   bottom: 0;
@@ -115,6 +127,10 @@
   border-bottom: 4px solid transparent;
   border-left: 4px solid #ffffff;
   margin: 10px 5px 5px 5px;
+}
+article {
+  margin-left: 221px;
+  padding: 10px;
 }
 footer {
   position: fixed;
